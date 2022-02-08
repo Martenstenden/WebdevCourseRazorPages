@@ -7,10 +7,13 @@
 
 @{
     string url = "?";
-    //maak hier de juiste url
+    <a href="?directions=Left&directions=Right&directions=Forward&directions=Backward"></a>
 }
 
 <a href="@url&directions=Left">Left</a>
+<a href="@url&directions=Right">Right</a>
+<a href="@url&directions=Forward">Forward</a>
+<a href="@url&directions=Backward">Backward</a>
 <!-- voeg zelf de andere richtingen toe -->
 
 <hr>
@@ -24,8 +27,8 @@
         {
             case Exercise2.Direction.Left: 
                 <li>Left</li> 
-            break;
-            //voeg de andere richtingen toe!
+            case Exercise2.Direction.Right:
+                <li>Right</li>
         } 
     }
 </ul>
