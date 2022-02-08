@@ -7,18 +7,17 @@
 
 <div>
     <p>
-        <span id="scoreHome">@Model.scoreHome</span> - <span id="scoreAway">@Model.scoreAway</span>
+        <span id="scoreHome">@Model.homeScore</span> - <span id="scoreAway">@Model.awayScore</span>
     </p>
     <div>
-        <a id="incrementHome" href="?incrementHome=@Model.scoreHome">Home ++</a>
-        <a id="decrementHome" href="?decrementHome=@Model.scoreHome">Home --</a>
+        <a id="incrementHomde" href="?action=inchome&scoreHome=&ScoreAway">Home ++</a>
+        <a id="decrementHome" href="?action=dechome&ScoreHome&ScoreAway">Home --</a>
 
-        <a id="incrementAway" href="?incrementAway=@Model.scoreAway">Away ++</a>
-        <a id="decrementAway" href="?decrementAway=@Model.scoreAway">Away --</a>
+        <a id="incrementAway" href="?action=incAway&ScoreHome&ScoreAway">Away ++</a>
+        <a id="decrementAway" href="?action=decAway&ScoreHome&ScoreAway">Away --</a>
     </div>
     <div>
-        <a id="reset" href="?reset=@Model.scoreAway @Model.scoreHome">Reset</a>
+        <a id="reset" href="?action=reset&ScoreHome&ScoreAway">Reset</a>
     </div>
 </div>
-
 
