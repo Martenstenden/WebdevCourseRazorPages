@@ -7,20 +7,20 @@
 
 <div>
     <form method="post">
-        <h1>Happy: <span id="happyCount">###</span>
-            <button id="btnHappy" type="submit" ###>Happy++</button>
+        <h1>Happy: <span id="happyCount">@Model.Happy</span>
+            <button name="action" value="Happy" id="btnHappy" type="submit">Happy++</button>
         </h1>
 
-        <h1>Disappointed: <span id="disappointedCount">###</span>
-            <button id="btnDisappointed" type="submit" ###>Disappointed++</button>
+        <h1>Disappointed: <span id="disappointedCount">@Model.Disappointed</span>
+            <button name="action" value="Disappointed" id="btnDisappointed" type="submit">Disappointed++</button>
         </h1>
 
-        <h1>Angry: <span id="angryCount">###</span>
-            <button id="btnAngry" type="submit" ###>Angry++</button>
+        <h1>Angry: <span id="angryCount">@Model.Angry</span>
+            <button name="action" value="Angry" id="btnAngry" type="submit">Angry++</button>
         </h1>
 
         <hr>
 
-        <button id="btnDeleteCookie" type="submit" ###>Delete Cookie</button>
+        <button name="action" value="reset" id="btnDeleteCookie" type="submit">Delete Cookie</button>
     </form>
 </div>
