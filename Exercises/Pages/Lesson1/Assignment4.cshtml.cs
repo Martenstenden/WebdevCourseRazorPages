@@ -5,38 +5,41 @@ namespace Exercises.Pages.Lesson1
 {
     public class Assignment4 : PageModel
     {
-        public string h1title { get; set; }
-        public string h2title { get; set; }
-        public string h3title { get; set; }
-        public void OnGet([FromRoute] string category, [FromRoute] string subcategory, [FromRoute] string productid)
+        public string Category { get; set; }
+        public string SubCategory { get; set; }
+        public string ProductId { get; set; }
+        public void OnGet([FromRoute] string category,[FromRoute] string subcategory,[FromRoute] string productid)
         {
+            Category = category;
+            ProductId = productid;
             if (subcategory == "subcategory")
             {
-                h1title = category;
-                h2title = "geen subcategory";
-                if (productid == "0")
+                Category = category;
+                ProductId = productid;
+                SubCategory = "Geen Subcategorie";
+                if (productid == "productid")
                 {
-                    h3title = "geen productid";
+                    ProductId = "Geen Product Id";
                 }
                 else
                 {
-                    h3title = productid;
+                    ProductId = productid;
                 }
             }
             else
             {
-                h1title = category;
-                h2title = subcategory;
-                if (productid == "0")
+                Category = category;
+                SubCategory = subcategory;
+                if (productid == "productid")
                 {
-                    h3title = "geen productid";
+                    ProductId = "Geen Product Id";
                 }
                 else
                 {
-                    h3title = productid;
+                    ProductId = productid;
                 }
             }
-
+            
         }
     }
 }

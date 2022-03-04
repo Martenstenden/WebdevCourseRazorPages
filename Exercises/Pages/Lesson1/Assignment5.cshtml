@@ -2,25 +2,25 @@
 @model Exercises.Pages.Lesson1.Assignment5
 
 @{
-    Layout = null;
+    ViewData["Title"] = "5";
 }
 
 <div>
     <form method="post">
         <h1>Happy: <span id="happyCount">@Model.Happy</span>
-            <button name="action" value="Happy" id="btnHappy" type="submit">Happy++</button>
+            <button id="btnHappy" type="submit" value="@Model.Happy">Happy++</button>
         </h1>
 
         <h1>Disappointed: <span id="disappointedCount">@Model.Disappointed</span>
-            <button name="action" value="Disappointed" id="btnDisappointed" type="submit">Disappointed++</button>
+            <button id="btnDisappointed" type="submit" value="@Model.Disappointed">Disappointed++</button>
         </h1>
 
         <h1>Angry: <span id="angryCount">@Model.Angry</span>
-            <button name="action" value="Angry" id="btnAngry" type="submit">Angry++</button>
+            <button id="btnAngry" type="submit" value="@Model.Angry">Angry++</button>
         </h1>
 
         <hr>
 
-        <button name="action" value="reset" id="btnDeleteCookie" type="submit">Delete Cookie</button>
+        <button id="btnDeleteCookie" type="submit" ###>Delete Cookie</button>
     </form>
 </div>

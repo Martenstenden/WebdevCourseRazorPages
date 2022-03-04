@@ -2,11 +2,10 @@
 @model Exercises.Pages.Lesson1.Exercise2
 
 @{
-    Layout = null;
+    ViewData["Title"] = "2";
 }
 
 @{
-    <a href="?directions=Left&directions=Right&directions=Forward&directions=Backward"></a>
     string url = "?" + string.Join("&", Model.Directions.Select(x => $"directions={x}"));
 }
 
@@ -24,18 +23,18 @@
     {
         switch(direction)
         {
-            case Exercise2.Direction.Left:
-                <li>Left</li>
-            break;
+            case Exercise2.Direction.Left: 
+                <li>Left</li> 
+                break;
             case Exercise2.Direction.Right: 
                 <li>Right</li> 
-            break;
+                break;
             case Exercise2.Direction.Forward: 
                 <li>Forward</li> 
-            break;
+                break;
             case Exercise2.Direction.Backward: 
                 <li>Backward</li> 
-            break;
+                break;
         } 
     }
 </ul>

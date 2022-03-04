@@ -2,19 +2,19 @@
 @model Exercises.Pages.Lesson1.Assignment1
 
 @{
-    Layout = null;
+    ViewData["Title"] = "1";
 }
 
 <div>
     <p>
-        <span id="scoreHome">@Model.HomeScore</span> - <span id="scoreAway">@Model.AwayScore</span>
+        <span id="scoreHome">@Model.scoreHome</span> - <span id="scoreAway">@Model.scoreAway</span>
     </p>
     <div>
-        <a id="incrementHomde" href="?action=incHome&HomeCount=@Model.HomeScore&AwayCount=@Model.AwayScore">Home ++</a>
-        <a id="decrementHome" href="?action=decHome&HomeCount=@Model.HomeScore&AwayCount=@Model.AwayScore">Home --</a>
+        <a id="incrementHome" href="?action=inchome&scorehome=@Model.scoreHome&scoreaway=@Model.scoreAway">Home ++</a>
+        <a id="decrementHome" href="?action=dechome&scorehome=@Model.scoreHome&scoreaway=@Model.scoreAway">Home --</a>
 
-        <a id="incrementAway" href="?action=incAway&AwayCount=@Model.AwayScore&HomeCount=@Model.HomeScore">Away ++</a>
-        <a id="decrementAway" href="?action=decAway&AwayCount=@Model.AwayScore&HomeCount=@Model.HomeScore">Away --</a>
+        <a id="incrementAway" href="?action=incaway&scorehome=@Model.scoreHome&scoreaway=@Model.scoreAway">Away ++</a>
+        <a id="decrementAway" href="?action=decaway&scorehome=@Model.scoreHome&scoreaway=@Model.scoreAway">Away --</a>
     </div>
     <div>
         <a id="reset" href="?action=reset">Reset</a>
